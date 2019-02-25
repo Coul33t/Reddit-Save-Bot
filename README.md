@@ -2,7 +2,8 @@
 A small bot I made to save my Reddit saved stuff offline.
 
 ## Requirements
-* A Reddit application, make one here: https://www.reddit.com/prefs/apps/ (Be careful to chose `script`). You can put `http://localhost:8080` for the Redirect URI.
+* [praw](https://praw.readthedocs.io/en/latest/) (`pip install praw`)
+* A Reddit application, [make one here](https://www.reddit.com/prefs/apps/) (Be careful to chose `script`). You can put `http://localhost:8080` for the Redirect URI.
 * A config file, containing the following:
   * `CLIENT_ID` = Your script ID
   * `SECRET_KEY` = Your script secret key
