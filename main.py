@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     saved = [vars(x) for x in me.saved()]
 
-    to_save = ('id', 'subreddit_id', 'url', 'title', 'subreddit', 'body_html', 'author', 'author_fullname', 'created_utc', 'score')
+    to_save = ('id', 'subreddit_id', 'url', 'title', 'subreddit', 'body', 'body_html', 'author', 'author_fullname', 'created_utc', 'score')
     final_save = to_json(saved, to_save)
 
     with open('data.json', 'w') as f:
