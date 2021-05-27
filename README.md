@@ -11,7 +11,7 @@ A small bot I made to save my Reddit saved stuff offline.
   * `PASSWORD` = Your Reddit password
   
 ## How to use it
-Just launch the `main.py` script: `py main.py`. The results will be stored into `data.json`. For each entry, there will be these informations:
+Just launch the `main.py` script: `py main.py`. The results will be stored into `data[YYYYmmdd].json`. For each entry, there will be these informations:
 
 * Common:
   * `id`: Post ID
@@ -25,11 +25,13 @@ Just launch the `main.py` script: `py main.py`. The results will be stored into 
   * `type`: Type of post (only " Post " or " Comment " at the moment)
   
 * Comments specific:
+  * `link_title`: Title of the original post
   * `body`: Raw content of the comment
   * `body_html`: HTML content of the comment
   
 * Posts specific:
   * `title`: Title of the post
+  * `self_text`: Text of the post
 
 ## TODO:
 * Database storage
