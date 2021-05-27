@@ -1,3 +1,4 @@
+from datetime import datetime
 import praw
 import json
 import sqlite3
@@ -41,6 +42,7 @@ def to_json(data, to_save):
         else:
             tmp_dict['type'] = 'post'
 
+
         print(f'Formatted {tmp_dict["author"]}\'s {tmp_dict["type"]}')
         final_save.append(tmp_dict)
 
@@ -57,8 +59,8 @@ if __name__ == '__main__':
 
     saved = [vars(x) for x in me.saved()]
 
-    to_save = ('id', 'subreddit_id', 'url', 'title', 'subreddit', 'body', 'body_html', 'author', 'author_fullname', 'created_utc', 'score')
+    to_save = ('id', 'subreddit_id', 'url', 'title', 'link_title', 'subreddit', 'selftext', 'body', 'body_html', 'author', 'author_fullname', 'created_utc', 'score')
     final_save = to_json(saved, to_save)
 
-    with open('data.json', 'w') as f:
+    with open('data' + datetime.today().strftime('%Y%m%d') + '.json', 'w') as f:
         json.dump(final_save, f)
